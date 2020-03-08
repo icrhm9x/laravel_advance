@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('admin.layouts.app',['title' => 'Danh sách người dùng'])
 @section('content')
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
     <div class="row">
@@ -55,7 +55,7 @@
                                         <td>0356653300</td>
                                         <td>1</td>
                                         <td>
-                                            <a href="#" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i> Sửa</a>
+                                            <a href="/admin/users/id/edit" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i> Sửa</a>
                                             <a href="#" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</a>
                                         </td>
                                     </tr>
@@ -67,7 +67,7 @@
                                         <td>0356653300</td>
                                         <td>1</td>
                                         <td>
-                                            <a href="#" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i> Sửa</a>
+                                            <a href="/admin/users/id/edit" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i> Sửa</a>
                                             <a href="#" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</a>
                                         </td>
                                     </tr>

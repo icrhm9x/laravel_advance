@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{{ $title ?? 'quản trị' }} - admin</title>
+	<title>{{ $title ?? 'quản trị' }} - ADMIN</title>
 	<!-- css -->
 	<link href="{{ asset('assets/admin/css/bootstrap.min.css') }}" rel="stylesheet">
 	
