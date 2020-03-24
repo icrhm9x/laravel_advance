@@ -15,6 +15,13 @@
 
             <div class="panel panel-primary">
                 <div class="panel-heading">Chi tiết đặt hàng</div>
+                @if ($errors->any())
+                @component('admin.layouts.components.alert')
+                @slot('type', 'danger')
+                @slot('stroke', 'cancel')
+                {{ $errors->first() }}
+                @endcomponent
+                @endif
                 <div class="panel-body">
                     <div class="bootstrap-table">
                         <div class="table-responsive">

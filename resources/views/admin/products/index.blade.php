@@ -32,7 +32,7 @@
                 </svg>
                 Đã thêm thành công<a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
             </div>
-            <a href="/admin/products/create" class="btn btn-primary">Thêm sản phẩm</a>
+            <a href="{{ route('products.create') }}" class="btn btn-primary">Thêm sản phẩm</a>
             <table class="table table-bordered" style="margin-top:20px;">
                 <thead>
                 <tr class="bg-primary">
@@ -62,8 +62,8 @@
                     </td>
                     <td>Áo Khoác Nam</td>
                     <td>
-                    <a href="#" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i> Sửa</a>
-                    <a href="#" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</a>
+                    <a href="{{ route('products.edit', 'id') }}" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i> Sửa</a>
+                    <a href="{{ route('products.destroy', 'id') }}" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</a>
                     </td>
                 </tr>
                 <tr>
@@ -83,8 +83,8 @@
                     </td>
                     <td>Áo Khoác Nam</td>
                     <td >
-                    <a href="#" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i> Sửa</a>
-                    <a href="#" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</a>
+                    <a href="{{ route('products.edit', 'id') }}" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i> Sửa</a>
+                    <a href="{{ route('products.destroy', 'id') }}" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</a>
                     </td>
                 </tr>
                 </tbody>

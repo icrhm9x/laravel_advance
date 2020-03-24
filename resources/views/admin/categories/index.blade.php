@@ -10,7 +10,6 @@
         </ol>
     </div>
     <!--/.row-->
-
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Quản lý danh mục</h1>
@@ -23,7 +22,6 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-5">
-
                             <div class="form-group">
                                 <label for="">Danh mục cha:</label>
                                 <select class="form-control" name="" id="">
@@ -38,21 +36,24 @@
                             <div class="form-group">
                                 <label for="">Tên Danh mục</label>
                                 <input type="text" class="form-control" name="name" id="" placeholder="Tên danh mục mới">
-
-                                <div class="alert bg-danger" role="alert">
-                                    <svg class="glyph stroked cancel">
-                                        <use xlink:href="#stroked-cancel"></use>
-                                    </svg>Tên danh mục đã tồn tại!<a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
-                                </div>
+                                @if ($errors->any())
+                                @component('admin.layouts.components.alert')
+                                @slot('type', 'danger')
+                                @slot('stroke', 'cancel')
+                                {{ $errors->first() }}
+                                @endcomponent
+                                @endif
                             </div>
                             <button type="submit" class="btn btn-primary">Thêm danh mục</button>
                         </div>
                         <div class="col-md-7">
-                            <div class="alert bg-success" role="alert">
-                                <svg class="glyph stroked checkmark">
-                                    <use xlink:href="#stroked-checkmark"></use>
-                                </svg> Đã thêm danh mục thành công! <a href="#" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
-                            </div>
+                            @if ($errors->any())
+                                @component('admin.layouts.components.alert')
+                                @slot('type', 'success')
+                                @slot('stroke', 'checkmark')
+                                {{ $errors->first() }}
+                                @endcomponent
+                            @endif
                             <h3 style="margin: 0;"><strong>Phân cấp Menu</strong></h3>
                             <div class="vertical-menu">
                                 <div class="item-menu active">Danh mục </div>
@@ -60,7 +61,6 @@
                                     <div class="category-fix">
                                         <a class="btn-category btn-primary" href="/admin/categories/id/edit"><i class="fa fa-edit"></i></a>
                                         <a class="btn-category btn-danger" href="#"><i class="fas fa-times"></i></i></a>
-
                                     </div>
                                 </div>
                                 <div class="item-menu"><span>---|Áo khoác Nam</span>
@@ -81,17 +81,14 @@
                                     <div class="category-fix">
                                         <a class="btn-category btn-primary" href="/admin/categories/id/edit"><i class="fa fa-edit"></i></a>
                                         <a class="btn-category btn-danger" href="#"><i class="fas fa-times"></i></i></a>
-
                                     </div>
                                 </div>
                                 <div class="item-menu"><span>---|Áo khoác Nữ</span>
                                     <div class="category-fix">
                                         <a class="btn-category btn-primary" href="/admin/categories/id/edit"><i class="fa fa-edit"></i></a>
                                         <a class="btn-category btn-danger" href="#"><i class="fas fa-times"></i></i></a>
-
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -99,8 +96,6 @@
             </div>
         </div>
         <!--/.col-->
-
-
     </div>
     <!--/.row-->
 </div>
